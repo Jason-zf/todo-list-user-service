@@ -19,13 +19,13 @@ public class UserController {
         return userService.login(user);
     }
 
-    @PostMapping("/register")
+    @PostMapping("/registration")
     public User register(@RequestBody User user) throws ConflictException {
         return userService.register(user);
     }
 
     @GetMapping("/verification")
-    public User verify(){
+    public User verify() {
         return userService.verify();
     }
 }
