@@ -1,7 +1,6 @@
 package com.thoughtworks.training.userservice.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.thoughtworks.training.userservice.exception.NotFoundException;
 import com.thoughtworks.training.userservice.model.User;
 import com.thoughtworks.training.userservice.service.UserService;
 import org.junit.Test;
