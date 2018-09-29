@@ -5,6 +5,7 @@ import com.thoughtworks.training.userservice.exception.NotFoundException;
 import com.thoughtworks.training.userservice.model.User;
 import com.thoughtworks.training.userservice.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -30,6 +31,10 @@ public class UserService {
     }
 
     public User verify() {
-        return null;
+        return (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+    }
+
+    public User getOne(Long id) {
+        return userRepository.findOne(id);
     }
 }

@@ -8,4 +8,8 @@ public class TokenService {
     public String createToken(User user1) {
         return "token";
     }
+
+    public Long parseToken(String token) {
+        return 1L;
+    }
 }

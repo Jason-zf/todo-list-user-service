@@ -1,6 +1,7 @@
 package com.thoughtworks.training.userservice.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+@Builder
 public class User {
     @Id
     @GeneratedValue
