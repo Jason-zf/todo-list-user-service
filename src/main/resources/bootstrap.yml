@@ -2,8 +2,8 @@ spring:
   application:
     name: user-service
   profiles:
-    active: dev
+    active: container
   cloud:
     config:
       label: master
-      uri: http://localhost:8888
+      uri: http://config-server:8888
